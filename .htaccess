@@ -1,0 +1,11 @@
+Options -Indexes
+<Files "config.php">
+Require all denied
+</Files>
+
+# Developers paste the tracking script once, so make browsers re-check it often (new versions then reach every site by themselves).
+<IfModule mod_headers.c>
+<Files "track.js">
+Header set Cache-Control "public, max-age=300, must-revalidate"
+</Files>
+</IfModule>
